@@ -10,5 +10,5 @@
 Create a new environment 
 
 ...
-conda create -p venv2 python==3,7 -y
+conda create -p venv2 python==3.7 -y
 ...
