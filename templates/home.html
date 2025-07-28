@@ -1,1 +1,143 @@
-<h1>Hello world!!!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCOS Prediction Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('/mnt/data/c613d67e-6318-45f3-b816-ea066259b13c.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.96);
+            padding: 30px 40px;
+            border-radius: 15px;
+            width: 65%;
+            max-width: 900px;
+            box-shadow: 0 0 25px rgba(255, 105, 180, 0.3);
+            margin-top: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d63384;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        form input {
+            width: 40%;
+            padding: 8px;
+            margin: 8px 2%;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .submit-button {
+            width: 100%;
+            background: linear-gradient(to right, #d63384, #c2185b);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: linear-gradient(to right, #c2185b, #ad1457);
+        }
+
+        .prediction {
+            margin: 40px auto;
+            font-size: 20px;
+            color: #008000;
+            background: rgba(255,255,255,0.95);
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 65%;
+        }
+
+        @media (max-width: 768px) {
+            form input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>PCOS Prediction for Women's Wellness</h1>
+        <form action="/predict" method="post">
+            <!-- input fields here -->
+            <input type="number" name="Age" placeholder="Age (yrs)" required>
+            <input type="number" name="Weight" placeholder="Weight (Kg)" required>
+            <input type="number" name="Height" placeholder="Height (Cm)" required>
+            <input type="number" name="BMI" placeholder="BMI" required>
+            <input type="number" name="Blood Group" placeholder="Blood Group (as code)" required>
+            <input type="number" name="Pulse rate" placeholder="Pulse rate (bpm)" required>
+            <input type="number" name="RR" placeholder="RR (breaths/min)" required>
+            <input type="number" name="Hb" placeholder="Hb (g/dl)" required>
+            <input type="number" name="Cycle" placeholder="Cycle (R/I)" required>
+            <input type="number" name="Cycle length" placeholder="Cycle length (days)" required>
+            <input type="number" name="Marriage Status" placeholder="Marriage Status (Yrs)" required>
+            <input type="number" name="Pregnant" placeholder="Pregnant (0/1)" required>
+            <input type="number" name="No. of abortions" placeholder="No. of abortions" required>
+            <input type="number" name="I beta-HCG" placeholder="I beta-HCG (mIU/mL)" required>
+            <input type="number" name="II beta-HCG" placeholder="II beta-HCG (mIU/mL)" required>
+            <input type="number" name="FSH" placeholder="FSH (mIU/mL)" required>
+            <input type="number" name="LH" placeholder="LH (mIU/mL)" required>
+            <input type="number" name="FSH/LH" placeholder="FSH/LH Ratio" required>
+            <input type="number" name="Hip" placeholder="Hip (inch)" required>
+            <input type="number" name="Waist" placeholder="Waist (inch)" required>
+            <input type="number" name="Waist:Hip" placeholder="Waist:Hip Ratio" required>
+            <input type="number" name="TSH" placeholder="TSH (mIU/mL)" required>
+            <input type="number" name="AMH" placeholder="AMH (ng/mL)" required>
+            <input type="number" name="PRL" placeholder="PRL (ng/mL)" required>
+            <input type="number" name="Vit D3" placeholder="Vit D3 (ng/mL)" required>
+            <input type="number" name="PRG" placeholder="PRG (ng/mL)" required>
+            <input type="number" name="RBS" placeholder="RBS (mg/dl)" required>
+            <input type="number" name="Weight gain" placeholder="Weight gain (0/1)" required>
+            <input type="number" name="hair growth" placeholder="Hair growth (0/1)" required>
+            <input type="number" name="Skin darkening" placeholder="Skin darkening (0/1)" required>
+            <input type="number" name="Hair loss" placeholder="Hair loss (0/1)" required>
+            <input type="number" name="Pimples" placeholder="Pimples (0/1)" required>
+            <input type="number" name="Fast food" placeholder="Fast food (0/1)" required>
+            <input type="number" name="Reg.Exercise" placeholder="Regular Exercise (0/1)" required>
+            <input type="number" name="BP_Systolic" placeholder="BP Systolic (mmHg)" required>
+            <input type="number" name="BP_Diastolic" placeholder="BP Diastolic (mmHg)" required>
+            <input type="number" name="Follicle No. (L)" placeholder="Follicle No. (L)" required>
+            <input type="number" name="Follicle No. (R)" placeholder="Follicle No. (R)" required>
+            <input type="number" name="Avg. F size (L)" placeholder="Avg. Follicle size (L) (mm)" required>
+            <input type="number" name="Avg. F size (R)" placeholder="Avg. Follicle size (R) (mm)" required>
+            <input type="number" name="Endometrium" placeholder="Endometrium (mm)" required>
+            <button type="submit" class="submit-button">Predict</button>
+        </form>
+    </div>
+    {% if prediction_text %}
+        <div class="prediction">{{ prediction_text }}</div>
+    {% endif %}
+</body>
+</html>
